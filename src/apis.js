@@ -23,4 +23,21 @@ export const getProductsDetail = async (id) => {
 }
 
 
+export const addProduct = async (data) => {
+    try {
+        let addResponse = await axios.post(`${domain}/products`, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(data)
+        });
+        return addResponse.data;
+    }
+    catch(err) {
+        console.log("Error adding product", err);
+    }
+}
+
+
 
