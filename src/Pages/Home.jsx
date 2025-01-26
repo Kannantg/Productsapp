@@ -1,6 +1,7 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import ProductsSection from '../HomepageComponents/ProductsSection';
+import { Link } from 'react-router-dom';
 
 const Home = () => {
 
@@ -12,7 +13,7 @@ const Home = () => {
             <Col xs="12" lg="10">
               <h1 className="banner-title">Best Way to Make Someone Happy to Buying Beautiful Products.</h1>
               <div className="text-center mt-4">
-              <button type="button" className="btn sitebtn">Explore Products</button>
+              <Link to="/products" className="btn sitebtn">Explore Products</Link>
               </div>
             </Col>
           </Row>

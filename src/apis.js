@@ -40,4 +40,23 @@ export const addProduct = async (data) => {
 }
 
 
+export const getCategories = async () => {
+    try {
+        let getCategory = await axios.get(`${domain}/products/categories`);
+        return getCategory.data;
+    }
+    catch (err) {
+        console.log("Errors getting Categories", err);
+    }
+}
+
+export const getCategoryData = async (category) => {
+    try {
+        let getCateData = await axios.get(`${domain}/products/category/${category}`);
+        return getCateData.data;
+    }
+    catch(err) {
+        console.log("Errors getting Category data", err);
+    }
+}
 

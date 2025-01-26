@@ -13,7 +13,7 @@ const ProductCard = ({ data }) => {
                             </div>
                             <div className="productcard-body">
                                 <span className="productcard-category">{da.category}</span>
-                                <p className="productcard-title">{da.title}</p>
+                                <p className="productcard-title">{da.title.substring(0, 80)}...</p>
                                 <span className="productcard-price">${da.price}</span>
                             </div>
                         </div>

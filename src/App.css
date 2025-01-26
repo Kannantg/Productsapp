@@ -15,6 +15,7 @@ body {
     font-size: 15px;
     font-weight: 500;
     position: relative;
+    padding-bottom: 100px;
 }
 
 a {
@@ -46,6 +47,22 @@ a {
     font-size: 16px;
     font-weight: 500;
     padding: 10px 16px !important;
+}
+
+.footer {
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    width: 100%;
+    border-top: 1px solid var(--bordercolor);
+}
+
+.footer .footertext {
+    font-size: 16px;
+    color: var(--black);
+    text-align: center;
+    padding: 20px;
+    margin: 0;
 }
 
 section {
@@ -305,4 +322,83 @@ section {
 
 .modal-header .btn-close:focus {
     box-shadow: none;
+}
+
+
+
+.products-page .gridbox {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.navbtn { 
+    display: block;
+    width: 100%;
+    text-align: start;
+    font-size: 16px;
+    color: var(--black);
+    text-transform: capitalize;
+    font-weight: 500;
+    border-radius: 2px;
+    border: 0px;
+    padding: 8px 16px;
+}
+
+.navbtn:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.navbtn.active {
+    color: var(--white);
+    background-color: var(--secondary);
+}
+
+
+
+
+
+
+/* media css */
+
+@media (width < 991px) {
+
+    .bannersection {
+        height: auto;
+        padding: 150px 0px 100px;
+    }
+
+    .gridbox {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (768px <= width <= 991px) {
+    .products-page .gridbox {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (576px <= width <= 767px) {
+    .products-page .gridbox {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (width < 576px) {
+
+    .banner-title {
+        font-size: 36px;
+        line-height: 55px;
+    }
+
+    .gridbox, .products-page .gridbox {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .productcard .productcard-head {
+        height: auto;
+    }
+
+    .productdetail-head {
+        font-size: 26px;
+        line-height: 36px;
+    }
 }

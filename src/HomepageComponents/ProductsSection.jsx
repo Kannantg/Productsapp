@@ -24,8 +24,6 @@ const ProductsSection = (props) => {
 
     const filteredData = data.filter((_, i) => i < 8);
 
-    console.log(data);
-
     return (
         <section className={`${sectionhead}section`}>
             <Container>

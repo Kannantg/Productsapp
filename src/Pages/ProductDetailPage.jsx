@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
-import { Link, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import { getProductsDetail } from '../apis';
 import { MdEventAvailable } from "react-icons/md";
 import { LiaGrinStars } from "react-icons/lia";
@@ -12,8 +12,6 @@ const ProductDetailPage = () => {
     const { id } = useParams();
     const [detdata, setDetData] = useState({});
 
-    console.log(id);
-
     useEffect(() => {
         getDataDetail(id);
     }, [id]);
@@ -22,8 +20,6 @@ const ProductDetailPage = () => {
         const getDetailData = getProductsDetail(id);
         getDetailData.then((res) => setDetData(res));
     }
-
-    console.log(detdata);
 
     const offlist = ["No-Risk Money Back Guarantee!", "No Hassle Refunds", "Secure Payments"];
 
